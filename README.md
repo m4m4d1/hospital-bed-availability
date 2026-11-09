@@ -43,7 +43,7 @@ indicators (Depkes RI, 2005), where 60-85% is ideal:
 ## Roadmap this week
 
 - [x] Mon: scaffold, facilities and data model
-- [ ] Tue: bed occupancy simulator and storage
+- [x] Tue: bed occupancy simulator and storage
 - [ ] Wed: REST API, occupancy rate, nearest free bed and alerts
 - [ ] Thu: dashboard
 - [ ] Fri: map, nearest free bed finder and alerts panel

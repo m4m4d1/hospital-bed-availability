@@ -1,0 +1,10 @@
+[project]
+name = "hospital-bed-availability"
+version = "0.1.0"
+description = "Hospital Bed & Puskesmas Availability System for Indonesia"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
