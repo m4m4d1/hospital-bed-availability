@@ -45,7 +45,7 @@ indicators (Depkes RI, 2005), where 60-85% is ideal:
 - [x] Mon: scaffold, facilities and data model
 - [x] Tue: bed occupancy simulator and storage
 - [x] Wed: REST API, occupancy rate, nearest free bed and alerts
-- [ ] Thu: dashboard
+- [x] Thu: dashboard
 - [ ] Fri: map, nearest free bed finder and alerts panel
 - [ ] Sat: Docker, tests and documentation
 - [ ] Sun: live demo and v1.0 release

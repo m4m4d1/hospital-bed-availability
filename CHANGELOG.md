@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Bilingual (EN/ID) dashboard: summary, facility table, ward detail with 72-hour chart, occupancy by province.
 - REST API: facilities, history, summary, regional trends, nearest free bed, alerts and a snapshot ingest endpoint (`/docs` for details).
 - Bed occupancy rate (BOR) with status bands, alert episodes for wards above 85% or full, haversine distances.
 - Bed occupancy simulator (admission and discharge cycles, weekend effect, regional dengue surges) and SQLite storage

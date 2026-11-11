@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hospital Bed & Puskesmas Availability · Indonesia</title>
+<meta name="description" content="Free hospital and puskesmas beds by ward in Indonesia: bed occupancy rate, regional trends and alerts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="logo" aria-hidden="true">+</div>
+    <div class="title">
+      <h1><span class="t-en">Hospital Bed & Puskesmas Availability</span><span class="t-id">Ketersediaan Tempat Tidur RS & Puskesmas</span></h1>
+      <p><span class="t-en">Fictional facilities in real cities · simulated bed counts</span><span class="t-id">Fasilitas fiktif di kota nyata · jumlah tempat tidur simulasi</span></p>
+    </div>
+    <div class="top-right">
+      <span class="pill demo-pill"><span class="t-en">Demo · simulated data</span><span class="t-id">Demo · data simulasi</span></span>
+      <span class="pill" id="updated">…</span>
+      <button class="lang" type="button" aria-label="Switch language"><span data-l="en">EN</span><span data-l="id">ID</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="kpis" id="kpis" aria-label="Summary"></section>
+
+  <section class="grid">
+    <div class="panel">
+      <h2><span class="t-en">Facilities</span><span class="t-id">Fasilitas</span><span class="muted"><span class="t-en">click a row for details</span><span class="t-id">klik baris untuk detail</span></span></h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th><span class="t-en">Facility</span><span class="t-id">Fasilitas</span></th>
+            <th><span class="t-en">Province</span><span class="t-id">Provinsi</span></th>
+            <th>Status</th>
+            <th class="num">BOR</th>
+            <th class="num"><span class="t-en">Free</span><span class="t-id">Kosong</span></th>
+            <th class="num"><span class="t-en">ICU free</span><span class="t-id">ICU kosong</span></th>
+          </tr></thead>
+          <tbody id="facility-rows"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" id="detail">
+      <div class="detail-head">
+        <div>
+          <h3 id="d-name">…</h3>
+          <div class="muted" id="d-where"></div>
+          <div id="d-status"></div>
+        </div>
+        <div class="big-index"><b id="d-bor">–</b><div class="muted"><span class="t-en">bed occupancy rate</span><span class="t-id">tingkat keterisian (BOR)</span></div></div>
+      </div>
+      <div class="wards" id="d-wards"></div>
+      <div class="chart-box"><canvas id="d-chart" aria-label="Bed occupancy, last 72 hours"></canvas></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <h2><span class="t-en">By province</span><span class="t-id">Per provinsi</span><span class="muted"><span class="t-en">change over 24 h</span><span class="t-id">perubahan 24 jam</span></span></h2>
+      <div class="table-wrap">
+        <table class="static">
+          <thead><tr>
+            <th><span class="t-en">Province</span><span class="t-id">Provinsi</span></th>
+            <th class="num">BOR</th>
+            <th></th>
+            <th class="num"><span class="t-en">Free</span><span class="t-id">Kosong</span></th>
+            <th class="num">24 h</th>
+          </tr></thead>
+          <tbody id="region-rows"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel">
+      <h2><span class="t-en">Occupancy trend by province, 72 h</span><span class="t-id">Tren keterisian per provinsi, 72 jam</span></h2>
+      <div class="chart-box tall"><canvas id="r-chart" aria-label="Bed occupancy by province, last 72 hours"></canvas></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="t-en">BOR bands per Depkes RI (2005): 60-85% is ideal. Facility names are fictional and bed counts simulated. Open source (MIT).</span>
+  <span class="t-id">Kategori BOR sesuai Depkes RI (2005): 60-85% ideal. Nama fasilitas fiktif dan jumlah tempat tidur disimulasikan. Sumber terbuka (MIT).</span>
+  <a href="https://github.com/m4m4d1/hospital-bed-availability">GitHub</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
