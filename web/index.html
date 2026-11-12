@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -82,6 +83,25 @@
       <div class="chart-box tall"><canvas id="r-chart" aria-label="Bed occupancy by province, last 72 hours"></canvas></div>
     </div>
   </section>
+  <section class="grid">
+    <div class="panel">
+      <h2><span class="t-en">Map and nearest free bed</span><span class="t-id">Peta dan tempat tidur kosong terdekat</span><span class="muted"><span class="t-en">colour = status</span><span class="t-id">warna = status</span></span></h2>
+      <div class="finder">
+        <label for="f-ward"><span class="t-en">Need a bed in</span><span class="t-id">Butuh tempat tidur di</span></label>
+        <select id="f-ward"></select>
+        <label for="f-from"><span class="t-en">near</span><span class="t-id">dekat</span></label>
+        <select id="f-from"></select>
+        <span class="hint live-only"><span class="t-en">or click the map</span><span class="t-id">atau klik peta</span></span>
+      </div>
+      <div id="map" class="map" role="img" aria-label="Map of hospitals and puskesmas"></div>
+      <div class="legend" id="legend"></div>
+      <ol class="results" id="results"></ol>
+    </div>
+    <div class="panel">
+      <h2><span class="t-en">Alerts, last 24 hours</span><span class="t-id">Peringatan, 24 jam terakhir</span><span class="muted" id="alert-count"></span></h2>
+      <ul class="alerts" id="alerts"></ul>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -91,6 +111,8 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="app.js"></script>
+<script src="map.js"></script>
 </body>
 </html>
