@@ -8,6 +8,8 @@ by province, and the nearest facility that still has a free bed of the type a pa
 > Week 3 of Nusantara Intel: one new open-source
 > information system for Indonesia every week, built in public one step per day.
 
+**Live demo:** https://m4m4d1.github.io/hospital-bed-availability/ (simulated data)
+
 ## Features
 
 - **16 facilities in 9 provinces**: class A, B and C hospitals and inpatient puskesmas in DKI
@@ -110,7 +112,7 @@ real situation at a real hospital. For real bed availability in Indonesia, use t
 Health's official services (such as SIRANAP) or call the facility. Verify the BOR bands against
 current Kemenkes guidance before official use.
 
-## Roadmap this week
+## Built this week
 
 - [x] Mon: scaffold, facilities and data model
 - [x] Tue: bed occupancy simulator and storage
@@ -118,7 +120,7 @@ current Kemenkes guidance before official use.
 - [x] Thu: dashboard
 - [x] Fri: map, nearest free bed finder and alerts panel
 - [x] Sat: Docker, tests and documentation
-- [ ] Sun: live demo and v1.0 release
+- [x] Sun: live demo and v1.0 release
 
 ## License
 

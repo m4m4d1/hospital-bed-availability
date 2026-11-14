@@ -1,7 +1,10 @@
 # Changelog
 
-## Unreleased
+## 1.0.0
 
+First release.
+
+- Live demo on GitHub Pages, built from a static snapshot of the API (`python -m app.export_demo`).
 - Dockerfile, tests for the snapshot ingest endpoint and API key, and full documentation.
 - Facility map (colour by status), nearest free bed finder and a 24-hour alerts panel linked to the facility detail.
 - Bilingual (EN/ID) dashboard: summary, facility table, ward detail with 72-hour chart, occupancy by province.
